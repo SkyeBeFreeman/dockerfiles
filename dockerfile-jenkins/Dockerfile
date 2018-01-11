@@ -1,9 +1,9 @@
-FROM maven:3.5.2-jdk-8-alpine
+FROM frolvlad/alpine-oraclejdk8:cleaned
 
 EXPOSE 4843
 
 RUN apk update && \
-    apk add --no-cache --virtual=build-dependencies wget git docker python openssh go make curl && \
+    apk add --no-cache --virtual=build-dependencies wget git docker python openssh go make curl maven && \
     wget https://bootstrap.pypa.io/get-pip.py && \
     wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war && \
     python get-pip.py && \
