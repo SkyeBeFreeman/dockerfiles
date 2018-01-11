@@ -1,4 +1,4 @@
-FROM frolvlad/alpine-oraclejdk8:cleaned
+FROM frolvlad/alpine-oraclejdk8:slim
 
 EXPOSE 4843
 
