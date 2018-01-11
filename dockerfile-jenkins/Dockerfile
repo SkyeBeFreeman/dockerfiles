@@ -13,7 +13,4 @@ ADD id_rsa /
 
 ADD run.sh /
 
-RUN apk --update add tzdata && \
-    ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-
 CMD [ "sh", "-c", "sh /run.sh" ]
